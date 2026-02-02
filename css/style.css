@@ -802,20 +802,7 @@ footer {
     overflow: hidden;
 }
 
-.animated-text::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width var(--transition-medium);
-}
-
-.logo:hover .animated-text::after {
-    width: 100%;
-}
+/* Rimossa l'animazione della sottolineatura */
 
 /* Links della navbar animati */
 .animated-nav .nav-link {
