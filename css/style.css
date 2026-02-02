@@ -291,9 +291,6 @@ nav ul li a:hover {
     height: auto;
     max-height: 400px;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02));
-    padding: 20px;
-    border-radius: 20px;
 }
 
 /* Servizi */
@@ -304,7 +301,7 @@ nav ul li a:hover {
 
 .servizi-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -775,9 +772,8 @@ footer {
 }
 
 .nav-logo-img {
-    height: 55px;
+    height: 82.28px;
     width: auto;
-    max-width: 280px;
 }
 
 /* Animazioni e transizioni */
@@ -1106,9 +1102,7 @@ footer {
     }
 
     .nav-logo-img {
-        height: 45px;
-        width: auto;
-        max-width: 220px;
+        height: 61.688px;
     }
     
     .hamburger {
