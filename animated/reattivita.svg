@@ -1,0 +1,63 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes handshake {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(-10deg); }
+        75% { transform: rotate(10deg); }
+      }
+      .hands {
+        animation: handshake 1.5s ease-in-out infinite;
+        transform-origin: 100px 100px;
+      }
+      @keyframes glow {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+      .spark {
+        animation: glow 1s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#0066CC" opacity="0.1" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Due mani che si stringono -->
+  <g class="hands">
+    <!-- Mano sinistra (blu) -->
+    <g>
+      <!-- Polso e avambraccio -->
+      <rect x="50" y="90" width="35" height="15" fill="#0066CC" rx="7"/>
+      <!-- Mano -->
+      <ellipse cx="85" cy="97" rx="12" ry="14" fill="#FF8C00"/>
+      <!-- Dita -->
+      <rect x="75" y="82" width="4" height="15" fill="#FF8C00" rx="2"/>
+      <rect x="80" y="80" width="4" height="17" fill="#FF8C00" rx="2"/>
+      <rect x="85" y="81" width="4" height="16" fill="#FF8C00" rx="2"/>
+      <rect x="90" y="83" width="4" height="14" fill="#FF8C00" rx="2"/>
+    </g>
+    
+    <!-- Mano destra (arancione) -->
+    <g>
+      <!-- Polso e avambraccio -->
+      <rect x="115" y="90" width="35" height="15" fill="#FF8C00" rx="7"/>
+      <!-- Mano -->
+      <ellipse cx="115" cy="97" rx="12" ry="14" fill="#0066CC"/>
+      <!-- Dita -->
+      <rect x="110" y="82" width="4" height="15" fill="#0066CC" rx="2"/>
+      <rect x="105" y="80" width="4" height="17" fill="#0066CC" rx="2"/>
+      <rect x="100" y="81" width="4" height="16" fill="#0066CC" rx="2"/>
+      <rect x="95" y="83" width="4" height="14" fill="#0066CC" rx="2"/>
+    </g>
+  </g>
+  
+  <!-- Scintille attorno -->
+  <circle class="spark" cx="75" cy="70" r="2.5" fill="#FF8C00"/>
+  <circle class="spark" cx="125" cy="70" r="2.5" fill="#0066CC" style="animation-delay: 0.3s;"/>
+  <circle class="spark" cx="70" cy="125" r="2.5" fill="#0066CC" style="animation-delay: 0.6s;"/>
+  <circle class="spark" cx="130" cy="125" r="2.5" fill="#FF8C00" style="animation-delay: 0.9s;"/>
+  
+  <!-- Simbolo di connessione -->
+  <path d="M 60 120 Q 100 140 140 120" stroke="#0066CC" stroke-width="2" fill="none" opacity="0.5" stroke-dasharray="5,5"/>
+</svg>
