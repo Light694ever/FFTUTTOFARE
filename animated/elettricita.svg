@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes spark {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+      .wire {
+        animation: spark 1.5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#FF8C00" opacity="0.1" stroke="#FF8C00" stroke-width="2"/>
+  
+  <!-- Spina elettrica -->
+  <rect x="85" y="30" width="30" height="40" fill="#0066CC" rx="3"/>
+  <circle cx="92" cy="55" r="4" fill="#FF8C00"/>
+  <circle cx="108" cy="55" r="4" fill="#FF8C00"/>
+  
+  <!-- Cavo -->
+  <path class="wire" d="M 100 70 Q 75 85 70 110" stroke="#0066CC" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path class="wire" d="M 100 70 Q 125 85 130 110" stroke="#FF8C00" stroke-width="6" fill="none" stroke-linecap="round" style="animation-delay: 0.3s;"/>
+  
+  <!-- Lampadina -->
+  <circle cx="100" cy="135" r="20" fill="none" stroke="#0066CC" stroke-width="3"/>
+  <ellipse cx="100" cy="155" rx="15" ry="8" fill="#FF8C00"/>
+  
+  <!-- Luce interna -->
+  <circle cx="100" cy="135" r="15" fill="#FF8C00" opacity="0.4"/>
+  
+  <!-- Scintille -->
+  <circle cx="80" cy="95" r="2" fill="#FF8C00" opacity="0"/>
+  <circle cx="120" cy="95" r="2" fill="#0066CC" opacity="0"/>
+</svg>

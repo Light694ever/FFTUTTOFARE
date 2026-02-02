@@ -1,0 +1,50 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes assemble {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(-15deg); }
+        75% { transform: rotate(15deg); }
+      }
+      .piece {
+        animation: assemble 2.5s ease-in-out infinite;
+      }
+      .piece1 { animation-delay: 0s; transform-origin: 130px 100px; }
+      .piece2 { animation-delay: 0.3s; transform-origin: 70px 100px; }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#FF8C00" opacity="0.1" stroke="#FF8C00" stroke-width="2"/>
+  
+  <!-- Tavolo montato (centro) -->
+  <g>
+    <!-- Piano tavolo -->
+    <rect x="50" y="65" width="100" height="15" fill="#0066CC" stroke="#FF8C00" stroke-width="2"/>
+    <!-- Gambe -->
+    <rect x="60" y="80" width="8" height="50" fill="#FF8C00" rx="4"/>
+    <rect x="132" y="80" width="8" height="50" fill="#FF8C00" rx="4"/>
+  </g>
+  
+  <!-- Pezzi da assemblare -->
+  <!-- Pezzo sinistra -->
+  <g class="piece piece2">
+    <rect x="20" y="85" width="25" height="30" fill="#0066CC" stroke="#FF8C00" stroke-width="2" rx="3"/>
+    <circle cx="32.5" cy="100" r="3" fill="#FF8C00"/>
+  </g>
+  
+  <!-- Pezzo destra -->
+  <g class="piece piece1">
+    <rect x="155" y="85" width="25" height="30" fill="#FF8C00" stroke="#0066CC" stroke-width="2" rx="3"/>
+    <circle cx="167.5" cy="100" r="3" fill="#0066CC"/>
+  </g>
+  
+  <!-- Utensili -->
+  <g>
+    <rect x="45" y="155" width="12" height="3" fill="#0066CC"/>
+    <circle cx="51" cy="157" r="4" fill="#FF8C00"/>
+    
+    <line x1="105" y1="155" x2="125" y2="155" stroke="#FF8C00" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="105" cy="155" r="3" fill="#0066CC"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes clean {
+        0%, 100% { transform: translateY(0) rotate(-5deg); }
+        50% { transform: translateY(10px) rotate(5deg); }
+      }
+      .panel {
+        animation: clean 2s ease-in-out infinite;
+      }
+      @keyframes shine {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.8; }
+      }
+      .shine {
+        animation: shine 1.5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#FF8C00" opacity="0.1" stroke="#FF8C00" stroke-width="2"/>
+  
+  <!-- Grondaia -->
+  <path d="M 50 80 Q 70 70 100 70 Q 130 70 150 80" stroke="#0066CC" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Acqua nella grondaia -->
+  <path d="M 55 78 Q 75 72 100 72 Q 125 72 145 78" stroke="#FF8C00" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round"/>
+  
+  <!-- Pannello solare -->
+  <g class="panel">
+    <rect x="50" y="110" width="100" height="60" fill="none" stroke="#0066CC" stroke-width="2" rx="5"/>
+    <!-- Celle solari -->
+    <g class="shine">
+      <rect x="60" y="120" width="15" height="15" fill="#FF8C00" opacity="0.6"/>
+      <rect x="80" y="120" width="15" height="15" fill="#0066CC" opacity="0.4"/>
+      <rect x="100" y="120" width="15" height="15" fill="#FF8C00" opacity="0.6"/>
+      <rect x="120" y="120" width="15" height="15" fill="#0066CC" opacity="0.4"/>
+    </g>
+    <g class="shine" style="animation-delay: 0.5s;">
+      <rect x="60" y="140" width="15" height="15" fill="#0066CC" opacity="0.4"/>
+      <rect x="80" y="140" width="15" height="15" fill="#FF8C00" opacity="0.6"/>
+      <rect x="100" y="140" width="15" height="15" fill="#0066CC" opacity="0.4"/>
+      <rect x="120" y="140" width="15" height="15" fill="#FF8C00" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <!-- Gocce pulizia -->
+  <circle cx="75" cy="160" r="2" fill="#0066CC" opacity="0.5"/>
+  <circle cx="125" cy="165" r="2" fill="#FF8C00" opacity="0.5"/>
+</svg>

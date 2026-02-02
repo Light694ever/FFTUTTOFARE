@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes rotate {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(-20deg); }
+      }
+      .key {
+        animation: rotate 2s ease-in-out infinite;
+        transform-origin: 110px 100px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#FF8C00" opacity="0.1" stroke="#FF8C00" stroke-width="2"/>
+  
+  <!-- Serratura -->
+  <rect x="70" y="70" width="60" height="60" fill="none" stroke="#0066CC" stroke-width="3" rx="5"/>
+  
+  <!-- Cilindro serratura -->
+  <circle cx="100" cy="100" r="20" fill="none" stroke="#0066CC" stroke-width="3"/>
+  
+  <!-- Buco serratura -->
+  <circle cx="100" cy="100" r="12" fill="#FF8C00" opacity="0.3"/>
+  <rect x="98" y="88" width="4" height="12" fill="#0066CC"/>
+  
+  <!-- Chiave -->
+  <g class="key">
+    <rect x="50" y="95" width="50" height="10" fill="#FF8C00" rx="5"/>
+    <circle cx="55" cy="100" r="7" fill="#FF8C00"/>
+    <rect x="48" y="98" width="4" height="4" fill="#FF8C00"/>
+    <rect x="48" y="104" width="4" height="4" fill="#FF8C00"/>
+  </g>
+  
+  <!-- Maniglia decorativa -->
+  <rect x="85" y="55" width="30" height="8" fill="#0066CC" rx="4" opacity="0.6"/>
+</svg>

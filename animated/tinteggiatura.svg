@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes paint {
+        0%, 100% { transform: translateX(-5px) rotate(-5deg); }
+        50% { transform: translateX(5px) rotate(5deg); }
+      }
+      .brush {
+        animation: paint 1.5s ease-in-out infinite;
+        transform-origin: 120px 50px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#0066CC" opacity="0.1" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Parete da dipingere -->
+  <rect x="40" y="60" width="90" height="80" fill="#E8E8E8" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Pennello -->
+  <g class="brush">
+    <!-- Manico -->
+    <rect x="115" y="30" width="12" height="40" fill="#FF8C00" rx="6"/>
+    <!-- Setole -->
+    <ellipse cx="121" cy="72" rx="10" ry="15" fill="#0066CC" opacity="0.8"/>
+  </g>
+  
+  <!-- Macchie di vernice dipinte -->
+  <ellipse cx="65" cy="80" rx="12" ry="8" fill="#0066CC" opacity="0.5"/>
+  <ellipse cx="85" cy="95" rx="15" ry="10" fill="#FF8C00" opacity="0.5"/>
+  <ellipse cx="95" cy="115" rx="10" ry="12" fill="#0066CC" opacity="0.4"/>
+  
+  <!-- Gocce di vernice -->
+  <circle cx="75" cy="140" r="3" fill="#FF8C00" opacity="0.6"/>
+  <circle cx="110" cy="138" r="2.5" fill="#0066CC" opacity="0.6"/>
+</svg>

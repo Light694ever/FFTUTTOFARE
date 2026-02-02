@@ -1,0 +1,57 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes repair {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(-30deg); }
+      }
+      .wrench {
+        animation: repair 2s ease-in-out infinite;
+        transform-origin: 130px 100px;
+      }
+      @keyframes spin-wheel {
+        0%, 100% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .drum {
+        animation: spin-wheel 3s linear infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#0066CC" opacity="0.1" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Lavatrice -->
+  <rect x="50" y="55" width="80" height="90" fill="none" stroke="#0066CC" stroke-width="3" rx="8"/>
+  
+  <!-- Sportello lavatrice -->
+  <circle cx="90" cy="100" r="28" fill="#FF8C00" opacity="0.1" stroke="#FF8C00" stroke-width="2"/>
+  <circle class="drum" cx="90" cy="100" r="20" fill="none" stroke="#0066CC" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Fori tamburo -->
+  <circle cx="85" cy="90" r="1.5" fill="#FF8C00"/>
+  <circle cx="95" cy="90" r="1.5" fill="#FF8C00"/>
+  <circle cx="80" cy="100" r="1.5" fill="#FF8C00"/>
+  <circle cx="100" cy="100" r="1.5" fill="#FF8C00"/>
+  <circle cx="85" cy="110" r="1.5" fill="#FF8C00"/>
+  <circle cx="95" cy="110" r="1.5" fill="#FF8C00"/>
+  
+  <!-- Display/comandi superiori -->
+  <rect x="60" y="60" width="60" height="8" fill="#0066CC" opacity="0.2" rx="2"/>
+  <circle cx="68" cy="64" r="1.5" fill="#FF8C00"/>
+  <circle cx="78" cy="64" r="1.5" fill="#FF8C00"/>
+  <circle cx="88" cy="64" r="1.5" fill="#FF8C00"/>
+  <circle cx="98" cy="64" r="1.5" fill="#FF8C00"/>
+  <circle cx="108" cy="64" r="1.5" fill="#FF8C00"/>
+  
+  <!-- Chiave inglese animata -->
+  <g class="wrench">
+    <rect x="120" y="95" width="35" height="6" fill="#FF8C00" rx="3"/>
+    <circle cx="155" cy="98" r="7" fill="#FF8C00"/>
+    <circle cx="155" cy="98" r="4" fill="#0066CC"/>
+  </g>
+  
+  <!-- Tubo scarico -->
+  <path d="M 120 140 Q 130 145 140 140" stroke="#0066CC" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
