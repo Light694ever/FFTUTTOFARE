@@ -124,7 +124,7 @@ header {
     z-index: 1000;
     box-shadow: var(--shadow);
     padding: 0;
-    height: 80px;
+    height: 140px;
 }
 
 header .container {
@@ -255,7 +255,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     color: white;
-    padding-top: 80px; /* Per compensare l'header fisso */
+    padding-top: 140px; /* Per compensare l'header fisso */
 }
 
 .hero .overlay {
