@@ -141,6 +141,12 @@ header .container {
     height: 100%;
 }
 
+.nav-logo-img {
+    height: 130px;
+    width: auto;
+    object-fit: contain;
+}
+
 .logo h1 {
     font-size: 1.8rem;
     color: var(--primary-color);
@@ -755,7 +761,7 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: #8BC34A;
+    background-color: #FF8C00;
     transform: translateY(-5px);
 }
 
@@ -783,19 +789,6 @@ footer {
     color: white;
 }
 
-/* Styling per il logo nella navbar */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav-logo-img {
-    height: 94.62px;
-    width: auto;
-}
-
-/* Animazioni e transizioni */
 .logo img {
     transition: transform 0.5s;
 }
@@ -1133,7 +1126,7 @@ footer {
     }
 
     .nav-logo-img {
-        height: 50px;
+        height: 65px;
     }
     
     .hamburger {
