@@ -235,7 +235,7 @@ nav ul li a:hover {
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('../img/hero2.jpeg?v=2');
+    background-image: url('../img/hero2.jpeg?v=3');
     background-size: cover;
     background-position: center;
     display: flex;
