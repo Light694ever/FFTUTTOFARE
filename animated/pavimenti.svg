@@ -1,0 +1,64 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes slide {
+        0%, 100% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+      }
+      .flooring {
+        animation: slide 2s ease-in-out infinite;
+      }
+      @keyframes polish {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+      .shine {
+        animation: polish 1.5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Sfondo cerchio -->
+  <circle cx="100" cy="100" r="95" fill="#0066CC" opacity="0.1" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Pavimento SPC (texture) -->
+  <g class="flooring">
+    <!-- Tavola 1 (sinistra) -->
+    <rect x="40" y="80" width="35" height="60" fill="#0066CC" rx="2"/>
+    <line x1="40" y1="93" x2="75" y2="93" stroke="#FF8C00" stroke-width="0.5" opacity="0.5"/>
+    <line x1="40" y1="106" x2="75" y2="106" stroke="#FF8C00" stroke-width="0.5" opacity="0.5"/>
+    <line x1="40" y1="119" x2="75" y2="119" stroke="#FF8C00" stroke-width="0.5" opacity="0.5"/>
+    
+    <!-- Tavola 2 (centro) -->
+    <rect x="82" y="75" width="36" height="65" fill="#FF8C00" rx="2"/>
+    <line x1="82" y1="88" x2="118" y2="88" stroke="#0066CC" stroke-width="0.5" opacity="0.5"/>
+    <line x1="82" y1="101" x2="118" y2="101" stroke="#0066CC" stroke-width="0.5" opacity="0.5"/>
+    <line x1="82" y1="114" x2="118" y2="114" stroke="#0066CC" stroke-width="0.5" opacity="0.5"/>
+    
+    <!-- Tavola 3 (destra) -->
+    <rect x="125" y="82" width="35" height="58" fill="#0066CC" rx="2"/>
+    <line x1="125" y1="95" x2="160" y2="95" stroke="#FF8C00" stroke-width="0.5" opacity="0.5"/>
+    <line x1="125" y1="108" x2="160" y2="108" stroke="#FF8C00" stroke-width="0.5" opacity="0.5"/>
+    <line x1="125" y1="121" x2="160" y2="121" stroke="#FF8C00" stroke-width="0.5" opacity="0.5"/>
+  </g>
+  
+  <!-- Lucidatrice/levigatrice animata (in alto) -->
+  <g>
+    <!-- Manico -->
+    <rect x="85" y="30" width="30" height="20" fill="#0066CC" rx="3"/>
+    <!-- Corpo levigatrice -->
+    <ellipse cx="100" cy="60" rx="20" ry="15" fill="#FF8C00"/>
+    <!-- Piastra di levigatura -->
+    <rect x="80" y="55" width="40" height="8" fill="#0066CC" rx="2"/>
+  </g>
+  
+  <!-- Brillantezza/Lucidità -->
+  <g class="shine">
+    <polygon points="60,50 65,55 55,55" fill="#FF8C00" opacity="0.8"/>
+    <polygon points="140,45 145,50 135,50" fill="#0066CC" opacity="0.8"/>
+  </g>
+  
+  <!-- Freccia movimento -->
+  <path d="M 50 155 L 150 155" stroke="#0066CC" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <polygon points="150,155 145,150 148,155 145,160" fill="#FF8C00" opacity="0.6"/>
+</svg>
