@@ -4,7 +4,7 @@
 .page-banner {
     position: relative;
     height: 300px;
-    background: linear-gradient(to right, #2E7D32, #4CAF50, #8BC34A);
+    background: linear-gradient(to right, #004A99, #0066CC, #FF8C00);
     background-size: cover;
     background-position: center;
     display: flex;
