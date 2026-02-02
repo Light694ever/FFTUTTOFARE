@@ -148,6 +148,14 @@ header .container {
     margin: 0;
 }
 
+.ff-blue {
+    color: var(--primary-color);
+}
+
+.tuttofare-orange {
+    color: var(--accent-color);
+}
+
 .logo .highlight {
     color: var(--accent-color);
     font-weight: 400;
