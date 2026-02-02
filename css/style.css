@@ -1076,6 +1076,7 @@ footer {
         height: auto;
         min-height: 100vh;
         padding: 100px 0;
+        background-position: center right;
     }
     
     .hero-container {
@@ -1101,8 +1102,19 @@ footer {
         height: 70px;
     }
 
+    .logo h1 {
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .logo {
+        gap: 5px;
+    }
+
     .nav-logo-img {
-        height: 70.94px;
+        height: 50px;
     }
     
     .hamburger {
@@ -1145,6 +1157,11 @@ footer {
         text-align: center;
         padding: 20px 0;
     }
+
+    .hero {
+        background-position: center 30%;
+        min-height: 80vh;
+    }
     
     .hero-text-column {
         order: 2;
@@ -1157,15 +1174,15 @@ footer {
     }
     
     .hero-text-column h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero-text-column p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .logo-img {
-        max-height: 200px;
+        max-height: 150px;
     }
 
     .servizi, .portfolio, .chi-siamo, .contatti {
