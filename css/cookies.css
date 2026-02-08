@@ -64,14 +64,22 @@
     
     #cookie-accept, #cookie-reject {
         flex: 1;
-        text-align: center;
-        padding: 12px 20px;
-        font-size: 1rem;
+        padding: 12px 16px;
+        font-size: 0.9rem;
         font-weight: 600;
-        color: inherit;
+        height: auto;
+        line-height: 1.4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
     }
     
     #cookie-accept {
         color: white;
+    }
+    
+    #cookie-reject {
+        color: var(--text-color);
     }
 }

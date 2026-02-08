@@ -126,12 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const banner = document.createElement('div');
             banner.id = 'cookie-banner';
             banner.innerHTML = `
-                <div class="cookie-content">
-                    <p>Questo sito utilizza i cookie per migliorare la tua esperienza. Continuando a utilizzare il sito, accetti la nostra <a href="cookies.html">Cookie Policy</a>.</p>
-                    <div class="cookie-buttons">
-                        <button id="cookie-accept" class="btn">Accetta</button>
-                        <button id="cookie-reject" class="btn btn-secondary">Rifiuta</button>
-                        <button id="cookie-settings" class="btn btn-tertiary">Impostazioni</button>
+                <div class="cookie-content" style="max-width:1200px;margin:0 auto;padding:15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;">
+                    <p style="margin:0;flex:1;min-width:250px;font-size:0.95rem;">Questo sito utilizza i cookie per migliorare la tua esperienza. Continuando a utilizzare il sito, accetti la nostra <a href="cookies.html" style="color:#0066CC;text-decoration:underline;">Cookie Policy</a>.</p>
+                    <div class="cookie-buttons" style="display:flex;gap:10px;flex-shrink:0;">
+                        <button id="cookie-accept" style="background-color:#0066CC;color:white;padding:10px 20px;border:none;border-radius:4px;font-size:0.9rem;font-weight:600;cursor:pointer;text-align:center;">Accetta</button>
+                        <button id="cookie-reject" style="background-color:transparent;color:#333;padding:10px 20px;border:1px solid #ddd;border-radius:4px;font-size:0.9rem;font-weight:600;cursor:pointer;text-align:center;">Rifiuta</button>
                     </div>
                 </div>
             `;
@@ -141,10 +140,10 @@ document.addEventListener('DOMContentLoaded', function() {
             banner.style.bottom = '0';
             banner.style.left = '0';
             banner.style.width = '100%';
-            banner.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            banner.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
             banner.style.boxShadow = '0 -2px 10px rgba(0, 0, 0, 0.1)';
-            banner.style.zIndex = '1000';
-            banner.style.padding = '15px';
+            banner.style.zIndex = '9999';
+            banner.style.borderTop = '3px solid #0066CC';
             
             // Aggiungo il banner al body
             document.body.appendChild(banner);
@@ -186,11 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Imposto il cookie HTTP
                 setCookie('cookie_consent', 'rejected', 365);
                 banner.remove();
-            });
-            
-            // Event listener per il pulsante "Impostazioni" (facoltativo)
-            document.getElementById('cookie-settings').addEventListener('click', function() {
-                showCookieSettings();
             });
         }
     }
