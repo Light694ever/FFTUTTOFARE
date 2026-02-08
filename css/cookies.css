@@ -34,12 +34,15 @@
 
 #cookie-accept {
     background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
 }
 
 #cookie-reject {
     background-color: transparent;
     color: var(--text-color);
     border: 1px solid #ddd;
+    font-weight: 600;
 }
 
 #cookie-reject:hover {
@@ -63,5 +66,12 @@
         flex: 1;
         text-align: center;
         padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: inherit;
+    }
+    
+    #cookie-accept {
+        color: white;
     }
 }
