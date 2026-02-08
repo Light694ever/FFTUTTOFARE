@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.createElement('div');
     modal.className = 'gallery-modal';
     modal.innerHTML = `
+        <span class="close-modal">&times;</span>
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
             <img class="modal-image" src="" alt="Image preview">
             <div class="modal-caption"></div>
         </div>
@@ -18,14 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalCaption = modal.querySelector('.modal-caption');
     const closeButton = modal.querySelector('.close-modal');
     
-    // Add click event to "Vedi Progetto" buttons
+    // Add click event to gallery items
     galleryItems.forEach(item => {
-        const viewProjectButton = item.querySelector('.view-project');
         const link = item.querySelector('a');
         
-        if (viewProjectButton && link) {
-            // Show image in modal when clicking "Vedi Progetto"
-            viewProjectButton.addEventListener('click', function(e) {
+        if (link) {
+            // Function to open modal
+            const openModal = function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 
@@ -37,35 +36,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalImg.src = imgSrc;
                 modalCaption.textContent = imgCaption;
                 
-                // Show modal
+                // Show modal with animation - double requestAnimationFrame ensures transition
                 modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        modal.classList.add('active');
+                    });
+                });
+                document.body.style.overflow = 'hidden';
+            };
             
-            // Add pointer cursor to show it's clickable
-            viewProjectButton.style.cursor = 'pointer';
+            // Click on link
+            link.addEventListener('click', openModal);
+            
+            // Click on entire item container (mobile friendly)
+            item.addEventListener('click', openModal);
         }
     });
     
+    // Close modal function
+    function closeModal() {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+    
     // Close modal when clicking the close button
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    closeButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeModal();
     });
     
     // Close modal when clicking outside the image
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            closeModal();
         }
     });
     
     // Close modal when pressing ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.style.display === 'flex') {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            closeModal();
         }
     });
     
